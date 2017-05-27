@@ -61,7 +61,7 @@ class Palm_Control_Listener(Leap.Listener):  #The Listener that we attach to the
             self.gesture_debouncer.signal(2)
         elif len(gesture_hand.fingers.extended()) == 1:  #One open finger on gesture hand (click down)
             self.gesture_debouncer.signal(1)
-        elif len(gesture_hand.fingers.extended()) == 0  #No open fingers (click up/no action)
+        elif len(gesture_hand.fingers.extended()) == 0:  #No open fingers (click up/no action)
             self.gesture_debouncer.signal(0)
         #Now that we've told the debouncer what we *think* the current gesture is, we must act
         #On what the debouncer thinks the gesture is^%{DOWN}
